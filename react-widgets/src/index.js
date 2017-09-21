@@ -1,8 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import { Router, Route, IndexRoute } from "react-router";
+
+import './styles/index.css';
+
+import App from './components/App';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+
+const app = document.getElementById('root');
+ReactDOM.render(
+    <Router>
+        <Route path="/" component={App}>
+            <IndexRoute component={App}></IndexRoute>
+        </Route>
+    </Router>,
+    app);
 registerServiceWorker();
