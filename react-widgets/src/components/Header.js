@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
+import Nav from './Nav';
 
 class Header extends Component {
-    constructor() {
-        super();
-    }
 
     render() {
         return (
             <div className="App-header">
                 <h2>{this.props.title}</h2>
+                <Nav />
             </div>
         );
     }
